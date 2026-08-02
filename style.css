@@ -10,9 +10,13 @@
   --accent-soft: #133f6b;
   --accent-text: #0d1117;
   --green: #7ee787;
+  --green-soft: #10331f;
   --purple: #d2a8ff;
+  --purple-soft: #2f1f47;
   --orange: #ffa657;
+  --orange-soft: #442712;
   --pink: #ff7b93;
+  --pink-soft: #451b26;
   --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.4);
   --radius: 10px;
   --max-width: 920px;
@@ -30,9 +34,13 @@
   --accent-soft: #ddf0ff;
   --accent-text: #ffffff;
   --green: #1a7f37;
+  --green-soft: #dafbe1;
   --purple: #8250df;
+  --purple-soft: #fbefff;
   --orange: #bc4c00;
+  --orange-soft: #fff1e5;
   --pink: #cf222e;
+  --pink-soft: #ffebe9;
   --shadow: 0 1px 2px rgba(31, 35, 40, 0.05), 0 6px 16px rgba(31, 35, 40, 0.07);
 }
 
@@ -48,9 +56,13 @@
     --accent-soft: #ddf0ff;
     --accent-text: #ffffff;
     --green: #1a7f37;
+    --green-soft: #dafbe1;
     --purple: #8250df;
+    --purple-soft: #fbefff;
     --orange: #bc4c00;
+    --orange-soft: #fff1e5;
     --pink: #cf222e;
+    --pink-soft: #ffebe9;
     --shadow: 0 1px 2px rgba(31, 35, 40, 0.05), 0 6px 16px rgba(31, 35, 40, 0.07);
   }
 }
@@ -268,6 +280,14 @@ header.site-nav {
   color: var(--text);
 }
 
+.terminal-body .out .loc {
+  color: var(--accent);
+}
+
+.terminal-body .out .stack {
+  color: var(--orange);
+}
+
 .cursor {
   display: inline-block;
   width: 8px;
@@ -374,6 +394,11 @@ section {
 
 .comment .num { color: var(--purple); }
 .comment .slashes { color: var(--text-muted); }
+.comment .num.c-blue { color: var(--accent); }
+.comment .num.c-green { color: var(--green); }
+.comment .num.c-purple { color: var(--purple); }
+.comment .num.c-orange { color: var(--orange); }
+.comment .num.c-pink { color: var(--pink); }
 
 section h2 {
   font-size: 1.3rem;
@@ -399,9 +424,21 @@ section h2 {
 .skill-card {
   background: var(--bg-alt);
   border: 1px solid var(--border);
+  border-left: 3px solid var(--border);
   border-radius: var(--radius);
   padding: 16px 18px;
 }
+
+.skill-card.c-blue { border-left-color: var(--accent); }
+.skill-card.c-blue .tag { color: var(--accent); background: var(--accent-soft); }
+.skill-card.c-green { border-left-color: var(--green); }
+.skill-card.c-green .tag { color: var(--green); background: var(--green-soft); }
+.skill-card.c-purple { border-left-color: var(--purple); }
+.skill-card.c-purple .tag { color: var(--purple); background: var(--purple-soft); }
+.skill-card.c-orange { border-left-color: var(--orange); }
+.skill-card.c-orange .tag { color: var(--orange); background: var(--orange-soft); }
+.skill-card.c-pink { border-left-color: var(--pink); }
+.skill-card.c-pink .tag { color: var(--pink); background: var(--pink-soft); }
 
 .skill-card h3 {
   margin: 0 0 12px;
@@ -469,6 +506,14 @@ section h2 {
   display: block;
 }
 
+.job-body .org.c-orange {
+  color: var(--orange);
+}
+
+.job-body .org.c-green {
+  color: var(--green);
+}
+
 .job-body ul {
   margin: 0;
   padding-left: 18px;
@@ -494,6 +539,7 @@ section h2 {
 .project-card {
   background: var(--bg-alt);
   border: 1px solid var(--border);
+  border-top: 3px solid var(--border);
   border-radius: var(--radius);
   padding: 20px;
   display: flex;
@@ -503,8 +549,23 @@ section h2 {
 
 .project-card:hover {
   transform: translateY(-3px);
-  border-color: var(--accent);
 }
+
+.project-card.c-blue { border-top-color: var(--accent); }
+.project-card.c-blue:hover { border-color: var(--accent); }
+.project-card.c-blue .project-kicker { color: var(--accent); }
+.project-card.c-green { border-top-color: var(--green); }
+.project-card.c-green:hover { border-color: var(--green); }
+.project-card.c-green .project-kicker { color: var(--green); }
+.project-card.c-purple { border-top-color: var(--purple); }
+.project-card.c-purple:hover { border-color: var(--purple); }
+.project-card.c-purple .project-kicker { color: var(--purple); }
+.project-card.c-orange { border-top-color: var(--orange); }
+.project-card.c-orange:hover { border-color: var(--orange); }
+.project-card.c-orange .project-kicker { color: var(--orange); }
+.project-card.c-pink { border-top-color: var(--pink); }
+.project-card.c-pink:hover { border-color: var(--pink); }
+.project-card.c-pink .project-kicker { color: var(--pink); }
 
 .project-card .project-kicker {
   font-size: 0.72rem;
@@ -611,6 +672,10 @@ section h2 {
   flex-shrink: 0;
   font-size: 0.85rem;
 }
+
+.contact-card.c-green .icon { background: var(--green-soft); color: var(--green); }
+.contact-card.c-purple .icon { background: var(--purple-soft); color: var(--purple); }
+.contact-card.c-orange .icon { background: var(--orange-soft); color: var(--orange); }
 
 .contact-card .text {
   min-width: 0;
