@@ -1,11 +1,14 @@
 document.getElementById("year").textContent = new Date().getFullYear();
 
-// Theme toggle, persisted in localStorage.
+// Theme toggle, persisted in localStorage. Default is dark (this is a dev
+// portfolio) unless the system explicitly prefers light — matches the CSS,
+// which is dark by default and only flips via [data-theme="light"] or an
+// explicit `prefers-color-scheme: light` media query.
 const root = document.documentElement;
 const themeToggle = document.getElementById("themeToggle");
 
-function systemPrefersDark() {
-  return window.matchMedia("(prefers-color-scheme: dark)").matches;
+function systemPrefersLight() {
+  return window.matchMedia("(prefers-color-scheme: light)").matches;
 }
 
 function applyTheme(theme) {
@@ -14,7 +17,7 @@ function applyTheme(theme) {
   } else {
     root.removeAttribute("data-theme");
   }
-  const isDark = theme ? theme === "dark" : systemPrefersDark();
+  const isDark = theme ? theme === "dark" : !systemPrefersLight();
   themeToggle.textContent = isDark ? "☀️" : "🌙";
 }
 
@@ -22,7 +25,7 @@ const savedTheme = localStorage.getItem("theme");
 applyTheme(savedTheme);
 
 themeToggle.addEventListener("click", () => {
-  const current = root.getAttribute("data-theme") || (systemPrefersDark() ? "dark" : "light");
+  const current = root.getAttribute("data-theme") || (systemPrefersLight() ? "light" : "dark");
   const next = current === "dark" ? "light" : "dark";
   localStorage.setItem("theme", next);
   applyTheme(next);

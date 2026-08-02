@@ -6,25 +6,28 @@
 <title>Lakshmi Chekkapalli — Data Engineer</title>
 <meta name="description" content="Data Engineer with 4 years of experience building ETL/ELT pipelines across AWS and GCP. Portfolio of batch, streaming, dbt, and ML pipeline projects.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🗄️</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="site-nav">
   <div class="wrap">
-    <a href="#top" class="brand">Lakshmi Chekkapalli</a>
+    <a href="#top" class="brand"><span class="prompt">$</span> lakshmi_chekkapalli</a>
     <nav>
       <ul class="nav-links" id="navLinks">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">about</a></li>
+        <li><a href="#skills">skills</a></li>
+        <li><a href="#experience">experience</a></li>
+        <li><a href="#projects">projects</a></li>
+        <li><a href="#education">education</a></li>
+        <li><a href="#contact">contact</a></li>
       </ul>
     </nav>
-    <div style="display:flex; align-items:center; gap:10px;">
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">☀️</button>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
     </div>
   </div>
@@ -32,8 +35,21 @@
 
 <main id="top">
   <section class="hero wrap" style="border-top:none;">
-    <div class="eyebrow reveal">Data Engineer · Charlotte, NC</div>
-    <h1 class="reveal">Building reliable pipelines that turn raw data into something teams can trust.</h1>
+    <div class="terminal reveal">
+      <div class="terminal-bar">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+        <span class="path">lakshmi@portfolio: ~</span>
+      </div>
+      <div class="terminal-body">
+        <div class="line"><span class="prompt">$</span><span class="cmd">whoami</span></div>
+        <p class="out"><span class="val">Data Engineer</span> · Charlotte, NC · 4 years, AWS &amp; GCP</p>
+        <div class="line" style="margin-top:14px;"><span class="prompt">$</span><span class="cmd">cat mission.txt<span class="cursor"></span></span></div>
+        <p class="out">Building reliable pipelines that turn raw data into something teams can trust.</p>
+      </div>
+    </div>
+
     <p class="lede reveal">
       4 years of experience designing and maintaining ETL/ELT pipelines across AWS and GCP,
       spanning retail and healthcare. I build the plumbing — ingestion, transformation,
@@ -46,15 +62,18 @@
       <span>🎓 MS in Information Technology (in progress)</span>
     </div>
     <div class="cta-row reveal">
-      <a href="#projects" class="btn btn-primary">View Projects</a>
-      <a href="assets/Lakshmi_Chekkapalli_Resume.docx" class="btn btn-ghost" download>Download Résumé</a>
-      <a href="mailto:lchekkapalli@gmail.com" class="btn btn-ghost">Get in Touch</a>
+      <a href="#projects" class="btn btn-primary">./view-projects</a>
+      <a href="assets/Lakshmi_Chekkapalli_Resume.docx" class="btn btn-ghost" download>↓ resume.docx</a>
+      <a href="mailto:lchekkapalli@gmail.com" class="btn btn-ghost">contact --email</a>
     </div>
   </section>
 
   <section id="about">
     <div class="wrap">
-      <h2 class="reveal">About</h2>
+      <div class="section-head reveal">
+        <span class="comment"><span class="slashes">//</span> <span class="num">01</span> about</span>
+        <h2>About</h2>
+      </div>
       <p class="section-intro reveal" style="max-width: 720px;">
         Data Engineer with 4 years of experience designing and maintaining data pipelines
         across AWS and GCP, spanning retail and healthcare domains. Experienced in building
@@ -68,8 +87,11 @@
 
   <section id="skills">
     <div class="wrap">
-      <h2 class="reveal">Skills</h2>
-      <p class="section-intro reveal">Languages, cloud platforms, and the concepts that tie them together.</p>
+      <div class="section-head reveal">
+        <span class="comment"><span class="slashes">//</span> <span class="num">02</span> skills</span>
+        <h2>Skills</h2>
+        <p class="section-intro">Languages, cloud platforms, and the concepts that tie them together.</p>
+      </div>
       <div class="skills-grid">
         <div class="skill-card reveal">
           <h3>Languages</h3>
@@ -120,8 +142,11 @@
 
   <section id="experience">
     <div class="wrap">
-      <h2 class="reveal">Experience</h2>
-      <p class="section-intro reveal">Retail and healthcare — different regulatory pressures, same core problem: getting raw data to move reliably.</p>
+      <div class="section-head reveal">
+        <span class="comment"><span class="slashes">//</span> <span class="num">03</span> experience</span>
+        <h2>Experience</h2>
+        <p class="section-intro">Retail and healthcare — different regulatory pressures, same core problem: getting raw data to move reliably.</p>
+      </div>
       <div class="timeline">
         <div class="job reveal">
           <div class="job-meta">
@@ -162,13 +187,16 @@
 
   <section id="projects">
     <div class="wrap">
-      <h2 class="reveal">Projects</h2>
-      <p class="section-intro reveal">
-        Four self-contained pipelines covering the patterns that show up across the job:
-        batch ETL, SQL-based transformation, real-time streaming, and a feature pipeline
-        feeding a model. Each runs locally via Docker Compose and has CI running its tests
-        on every push.
-      </p>
+      <div class="section-head reveal">
+        <span class="comment"><span class="slashes">//</span> <span class="num">04</span> projects</span>
+        <h2>Projects</h2>
+        <p class="section-intro">
+          Four self-contained pipelines covering the patterns that show up across the job:
+          batch ETL, SQL-based transformation, real-time streaming, and a feature pipeline
+          feeding a model. Each runs locally via Docker Compose and has CI running its tests
+          on every push.
+        </p>
+      </div>
       <div class="project-grid">
 
         <div class="project-card reveal">
@@ -257,7 +285,10 @@
 
   <section id="education">
     <div class="wrap">
-      <h2 class="reveal">Education</h2>
+      <div class="section-head reveal">
+        <span class="comment"><span class="slashes">//</span> <span class="num">05</span> education</span>
+        <h2>Education</h2>
+      </div>
       <div class="edu-list">
         <div class="edu-item reveal">
           <div class="job-meta">
@@ -284,34 +315,37 @@
 
   <section id="contact">
     <div class="wrap">
-      <h2 class="reveal">Contact</h2>
-      <p class="section-intro reveal">Open to data engineering roles — happy to talk pipelines, cloud data platforms, or the projects above.</p>
+      <div class="section-head reveal">
+        <span class="comment"><span class="slashes">//</span> <span class="num">06</span> contact</span>
+        <h2>Contact</h2>
+        <p class="section-intro">Open to data engineering roles — happy to talk pipelines, cloud data platforms, or the projects above.</p>
+      </div>
       <div class="contact-grid">
         <a class="contact-card reveal" href="mailto:lchekkapalli@gmail.com">
           <span class="icon">✉️</span>
-          <span>
-            <span class="label">Email</span><br>
+          <span class="text">
+            <span class="label">Email</span>
             <span class="value">lchekkapalli@gmail.com</span>
           </span>
         </a>
         <a class="contact-card reveal" href="https://linkedin.com/in/lakshmi-chekkapalli" target="_blank" rel="noopener">
           <span class="icon">in</span>
-          <span>
-            <span class="label">LinkedIn</span><br>
+          <span class="text">
+            <span class="label">LinkedIn</span>
             <span class="value">lakshmi-chekkapalli</span>
           </span>
         </a>
         <a class="contact-card reveal" href="https://github.com/lakshmichekkapalli" target="_blank" rel="noopener">
           <span class="icon">🐙</span>
-          <span>
-            <span class="label">GitHub</span><br>
+          <span class="text">
+            <span class="label">GitHub</span>
             <span class="value">lakshmichekkapalli</span>
           </span>
         </a>
         <span class="contact-card reveal">
           <span class="icon">📍</span>
-          <span>
-            <span class="label">Location</span><br>
+          <span class="text">
+            <span class="label">Location</span>
             <span class="value">Charlotte, NC</span>
           </span>
         </span>
