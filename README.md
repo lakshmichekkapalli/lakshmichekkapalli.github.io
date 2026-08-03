@@ -27,5 +27,4 @@ then open http://localhost:8123.
 index.html      # all page content
 style.css       # design system (CSS custom properties) + layout
 script.js       # theme toggle, mobile nav, scroll-reveal
-assets/         # downloadable résumé
 ```
